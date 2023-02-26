@@ -1,11 +1,16 @@
 from flask import Flask
 
+import os
+
+# from .login import login_a
+from . import login
+
 def create_app():
     app = Flask(__name__)
-    # app.config.from_mapping()
 
-    @app.route('/hello')
-    def hello():
-        return 'Hello, World'
+    app.config.from_mapping(
+        SECRET_KEY = 'dev',
+        SECRET = os.path.join(app.instance_path, 'movies.sqlite')
+    )
 
     return app
