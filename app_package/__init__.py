@@ -13,4 +13,6 @@ def create_app():
         SECRET = os.path.join(app.instance_path, 'movies.sqlite')
     )
 
+    print(app.instance_path)
+
     return app
