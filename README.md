@@ -15,8 +15,15 @@ For Windows: create venv via:
 Install necessary packages:
 `pip install -r requirements.txt`
 
-Run Flask server w/ debug mode to allow auto-reloading:
+Initialize database (from root level):
+`flask --app app_package init-db`
+
+Run Flask server (from root level) w/ debug mode to allow auto-reloading :
 `flask --app app_package run --debug`
 
-Initialize database
-`flask --app app_package init-db`
+To run test (from root level):
+`python -m pytest`
+
+
+To run test (from root level) w/ coverage:
+`coverage run -m pytest`
