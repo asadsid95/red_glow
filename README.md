@@ -17,3 +17,6 @@ Install necessary packages:
 
 Run Flask server w/ debug mode to allow auto-reloading:
 `flask --app app_package run --debug`
+
+Initialize database
+`flask --app app_package init-db`

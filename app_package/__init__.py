@@ -3,7 +3,8 @@ from flask import Flask
 import os
 
 # from .login import login_a
-from . import login
+from . import login, db
+
 
 def create_app():
     app = Flask(__name__)
@@ -17,5 +18,7 @@ def create_app():
         os.makedirs(app.instance_path)
     except OSError:
         pass
+
+    db.init_app(app)
 
     return app
