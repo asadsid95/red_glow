@@ -3,5 +3,6 @@ venv/
 .env
 .flaskenv
 
-*.pyc
-__pycache__/
+instance/
+
+app_package/__pycache__

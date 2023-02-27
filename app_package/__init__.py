@@ -10,9 +10,12 @@ def create_app():
 
     app.config.from_mapping(
         SECRET_KEY = 'dev',
-        SECRET = os.path.join(app.instance_path, 'movies.sqlite')
+        DATABASE = os.path.join(app.instance_path, 'movies.sqlite')
     )
 
-    print(app.instance_path)
+    try:
+        os.makedirs(app.instance_path)
+    except OSError:
+        pass
 
     return app
