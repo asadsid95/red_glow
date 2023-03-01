@@ -2,7 +2,7 @@ from flask import Flask
 
 import os
 
-from . import db
+from . import db, main_page
 
 
 def create_app(test_config=None):
@@ -24,5 +24,7 @@ def create_app(test_config=None):
         pass
 
     db.init_app(app)
+
+    app.register_blueprint(main_page.bp)
 
     return app

@@ -9,3 +9,4 @@ instance/
 app_package/__pycache__
 tests/__pycache__
 
+.pytest_cache
